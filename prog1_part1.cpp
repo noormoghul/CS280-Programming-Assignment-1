@@ -43,12 +43,11 @@ int main(int argc, char *argv[])
         ifstream infile;
         infile.open(argv[cc]);
         
-        
-        
         if(infile.is_open() == false){
             cout<<"BAD FILE "<<argv[cc]<<endl;
             return 0;
         }
+        
     infile.close();    
     infile.clear();
     }
