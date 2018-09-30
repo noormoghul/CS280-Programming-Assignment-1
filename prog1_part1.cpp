@@ -49,8 +49,8 @@ int main(int argc, char *argv[])
             cout<<"BAD FILE "<<argv[cc]<<endl;
             return 0;
         }
-        
-        
+    infile.close();    
+    infile.clear();
     }
     
     
