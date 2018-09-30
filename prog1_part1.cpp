@@ -1,3 +1,6 @@
+// Noor Moghul 
+// 09/30/2018
+
 #include <iostream>
 #include <string>
 #include <fstream>
