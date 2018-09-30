@@ -37,10 +37,14 @@ If the mode is “all”, print all phrases, whether the top frequency or not. I
 that are max frequency. In either mode, results are printed in alphabetical order by the phrase text.
 
 Your program must process the command line arguments. Then, for each input file, your program shall:
-● Read each file, according to the rules described above, resulting in a list of WORDS
-● Determine PHRASES of N words
-● Find and print the PHRASE that appears the most often by examining the map element(s) that has the
-highest frequency (or all of them if in “all” mode)
+        ● Read each file, according to the rules described above, resulting in a list of WORDS
+
+
+        ● Determine PHRASES of N words
+
+
+        ● Find and print the PHRASE that appears the most often by examining the map element(s) that has the
+        highest frequency (or all of them if in “all” mode)
 
 
 After processing every file, your program should print all common phrases across all files. This means, for
@@ -68,18 +72,33 @@ out as follows:
 As you work on this problem, take note of the following possible error cases:
     ● You must detect the case where no arguments are passed. In that case, print the error message “NO
     PHRASE LENGTH” and stop.
+    
+    
     ● You must detect the case where the argument specified for N is not a positive integer. In that case,
     print the error message “INVALID PHRASE LENGTH” and stop, also if the integer is negative or zero
+    
+    
     ● Print “NO MODE” if a second argument is missing
+    
+    
     ● Print “INVALID MODE” if the second argument is something other than “all” or “top”
+    
+    
     ● You must detect the case where there are no file names specified. In that case, print the message “NO
     FILES GIVEN” and stop.
+    
+    
     ● If a file cannot be opened or read for any reason, print the error message “BAD FILE FILENAME” and
     continue to the next file.
+    
+    
     ● If there are no phrases at all, i.e. all empty files or no phrases long enough for the size given, then it
     should print “NO PHRASES”
+    
+    
     ● Note that it is also possible that ALL of the phrases in the input occur with the same frequency. In that
     case, there is no phrase that appears more often than any other. In that case, the output should be
+    
     “ALL PHRASES EQUALLY FREQUENT”
 
 
@@ -102,6 +121,8 @@ and determining if all phrases are the same length
 
 Note that both in your “work” directory, and also on Moodle, there are files:
     ● cases.txt
+    
+    
     ● cases.tar.gz
 
 The cases.txt file covers all the possible cases, as in what arguments are used for each test case.
