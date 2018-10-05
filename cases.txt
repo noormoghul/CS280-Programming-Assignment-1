@@ -1,0 +1,46 @@
+noargs:
+    
+len0:
+    0
+lenxxx:
+    xxx
+modexxx:
+    1 xxx
+modeall:
+    1 all
+modetop:
+    1 top
+onefile:
+    1 all emptyfile
+badfile:
+    1 all nonexistantfile emptyfile
+manyfile:
+    1 all emptyfile nonexistantfile emptyfile
+emptyphrase:
+    1 all emptyfile
+oneword:
+    1 all onewordfile
+onewordtwice:
+    1 all onewordtwicefile
+twowords:
+    1 all onewordfile onewordtwicefile
+manywords:
+    1 all manywordsfile
+mustlowerone:
+    1 all upperword
+mustlowermany:
+    1 all mixedword
+allmodecomplete:
+    1 all constitution
+wordfreqsame:
+    1 all samefreq
+phraselen2:
+    2 all manywordsfile
+topmode:
+    1 top manywordsfile
+phraselen3:
+    3 top manywordsfile
+phrasefreqsame:
+    3 top samefreq
+topmodecomplete:
+    3 top fullconstitution
