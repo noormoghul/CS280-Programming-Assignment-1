@@ -117,8 +117,8 @@ int main(int argc, char *argv[]){
         
     }
     
-    map<int,string> mapzFlipped;                                                    //map to check if all the phrases have
-                                                                                    //same frequency
+    map<int,string> mapzFlipped;                                                    //map used to check if all the phrases
+                                                                                    //have same frequency
     for(map<string,int>::iterator i = mapz.begin(); i != mapz.end(); ++i)
     {                                                                               //flip map, same data will get overwritten,
         mapzFlipped[i->second] = i->first;                                          //if one key is left, frequency is same
