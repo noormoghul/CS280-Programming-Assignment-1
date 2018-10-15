@@ -46,11 +46,11 @@ int main(int argc, char *argv[]){
     }
     
     
-    map<string, int> mapz;                                                      //map to count the words/phrases
+    map<string, int> mapz;                                                      //map used to count the words/phrases
     
     string word = "";
     
-    vector<string> v;                                                           //vector to go through the phrases
+    vector<string> v;                                                           //vector used to go through the phrases
     
     string strang;
     
