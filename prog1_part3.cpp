@@ -88,8 +88,8 @@ int main(int argc, char *argv[]){
                 
                 if(nInt == 1)                                                       
                 {
-                    mapz[word]++;
-                }
+                    mapz[word]++;                                                   //if phrase length is 1, add word directly
+                }                                                                   //into map
                 else
                 {
                     
