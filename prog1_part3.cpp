@@ -37,8 +37,6 @@ int main(int argc, char *argv[]){
         cout<<"INVALID MODE"<<endl;
         return 0;
     }
-    
-    
     if(argc < 4)                                                                //check if you were given any files
     {
         cout<<"NO FILES GIVEN"<<endl;
@@ -47,18 +45,13 @@ int main(int argc, char *argv[]){
     
     
     map<string, int> mapz;                                                      //map used to count the words/phrases
-    
     string word = "";
-    
     vector<string> v;                                                           //vector used to go through the phrases
-    
     string strang;
-    
     
     int cc = 3;
     while(cc < argc)                                                           //open a file
     {
-        
         ifstream file;
         file.open(argv[cc]);
         
@@ -68,14 +61,12 @@ int main(int argc, char *argv[]){
             cout<<"NO PHRASES"<<endl;
             continue;
         }
-        
         if(!file.is_open())                                                  //check if filed opened successfully
         {
             cc++;
             cout<<"BAD FILE "<<argv[cc]<<endl;
             continue;
         }
-        
         
         string oneline;
         while(getline(file, oneline))                                               //get a line
@@ -92,7 +83,6 @@ int main(int argc, char *argv[]){
                 }                                                                   //into map
                 else
                 {
-                    
                     v.push_back(word);                                              //add word to vector until phrase 
                                                                                     //length is reached
                     if(v.size() == nInt)
@@ -105,16 +95,12 @@ int main(int argc, char *argv[]){
                         mapz[strang]++;
                         v.erase( v.begin() );                                       //erase the first index in the vector
                     }
-                    
                 }
-                
             }
         }
         file.close();
         file.clear();
-        
         cc++;
-        
     }
     
     map<int,string> mapzFlipped;                                                    //map used to check if all the phrases
@@ -123,13 +109,11 @@ int main(int argc, char *argv[]){
     {                                                                               //flip map, same data will get overwritten,
         mapzFlipped[i->second] = i->first;                                          //if one key is left, frequency is same
     }
-    
     if(mapzFlipped.size() == 1)
     {
         cout<<"ALL PHRASES EQUALLY FREQUENT"<<endl;
         return 0;
     }
-    
     
     int tempHighest = 0;
     
@@ -137,7 +121,6 @@ int main(int argc, char *argv[]){
     {
         for(map<string,int>::iterator wit = mapz.begin(); wit!= mapz.end(); ++wit)      //finds the highest value
         {
-            
             while(mapz.empty())
                 break;
             
@@ -146,24 +129,17 @@ int main(int argc, char *argv[]){
         }
         for(map<string,int>::iterator tit = mapz.begin(); tit!= mapz.end(); ++tit)      //finds others that match the highest
         {
-            
             if(tit->second == tempHighest)
             {
                 cout<< tit->first << " " <<tit->second <<endl;
             }
         }
-        
     }
     else
     {
-        
         for(map<string, int>::iterator wit = mapz.begin(); wit != mapz.end(); ++wit)            //print the map
             cout<< wit->first << " " <<wit->second <<endl;
-        
     }
-    
-    
-    
-    
+
     return 0;
 }
